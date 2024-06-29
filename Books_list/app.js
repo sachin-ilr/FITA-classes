@@ -1,5 +1,5 @@
 //get the container element from index.html
-const mainPage = document.getElementById('main')
+const mainPage = document.getElementById('booksContainer')
 
 //Function to fetch the books
 async function fetchBooks() {
@@ -20,40 +20,40 @@ async function fetchBooks() {
 function displayBooks(books) { 
     books.forEach((book, index) => {
         const bookDiv = document.createElement('div')
-        bookDiv.id = 'book-${index}'
-        bookDiv.className = 'books'
+        bookDiv.id = 'book-' + index
+        bookDiv.className = 'bookDiv'
 
         const titleP = document.createElement('p')
         titleP.className = 'title'
-        titleP.id = 'title-${index}'
-        titleP.textContent = 'Title: ${book.title}'
+        titleP.id = 'title-' + index
+        titleP.textContent = 'Title: ' + book.title
         
 
         const authorP = document.createElement('p')
-        authorP.className = 'author-${index}'
-        authorP.id = index
-        authorP.textContent = 'Author: ${book.author}'
+        authorP.className = 'author'
+        authorP.id = 'author-' + index
+        authorP.textContent = 'Author: ' + book.author
 
         const image = document.createElement('img')
-        image.className = 'image-${index}'
-        image.id = index
+        image.className = 'image'
+        image.id = 'image-' + index
         image.sec = books.cover_image
-        image.alt = 'Cover image of ${book.title}'
+        image.alt = 'Cover image of ' + book.title
 
         const descP = document.createElement('p')
-        descP.className = 'desc-${index}'
-        descP.id = index
-        descP.textContent = 'Description: ${book.description}'
+        descP.className = 'desc'
+        descP.id = 'desc-' + index
+        descP.textContent = 'Description: ' + book.description
 
         const genreP = document.createElement('p')
-        genreP.className = 'genre-${index}'
-        genreP.id = index
-        genreP.textContent = 'Genre: ${book.genre}'
+        genreP.className = 'genre'
+        genreP.id = 'genre-' + index
+        genreP.textContent = 'Genre: ' + book.genre
 
         const pubP = document.createElement('p')
-        pubP.className = 'genre-${index}'
-        pubP.id = index
-        pubP.textContent = 'Publication year: ${book.publication_year}'
+        pubP.className = 'publication'
+        pubP.id = 'pub-' + index
+        pubP.textContent = 'Publication year: ' + book.publication_year
 
         bookDiv.appendChild(titleP)
         bookDiv.appendChild(authorP)

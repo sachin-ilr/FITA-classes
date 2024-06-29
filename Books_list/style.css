@@ -1,0 +1,24 @@
+body {
+    background-color: #323643;
+}
+
+#header {
+    background-color: #606470;
+    place-items: center;
+    height: 50px;
+}
+
+#booksContainer {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #93deff;
+}
+
+.bookDiv {
+    font-size: 11px;
+    width: 200px;
+    height: 175px;
+    background-color: #f7f7f7;
+}
+
+/*fourth layer color code: #f7f7f7*/
